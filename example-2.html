@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <style type="text/css">
+		ul {
+			list-style: none;
+			text-align: center;
+		}
+		li {
+			height: 60px;
+			width: 150px;
+			margin-bottom: 5px;
+			border: 1px solid #000;
+		}    
+		li a {
+			height: 60px;
+			width:150px;
+			display: block;
+		}
+		li span {
+			display:table-cell;
+			width:150px;
+			height: 60px;
+			vertical-align: middle;
+		}
+		*:first-child+html li span { /* IE7 Fix */
+			display: block;
+			z-index: expression(
+			runtimeStyle.zIndex = 1,
+			this == ((90/2)-parseInt(offsetHeight)/2) <0 ? style.marginTop="0" : style.marginTop=(90/2)-(parseInt(offsetHeight)/2) +'px');
+		}
+    </style>
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="#" class='link'><span>Пример 1</span></a>
+		</li>
+		<li>
+			<a href="#"><span>Пример 2</span></a>
+		</li>
+		<li>
+			<a href="#"><span>Длинный пример в две строки</span></a>
+		</li>
+	</ul>
+</body>
+</html>
